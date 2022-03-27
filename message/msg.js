@@ -221,9 +221,13 @@ module.exports = async(conn, msg, m, setting, store) => {
 		}
 		
 		const buttonsDefault = [
-			{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6285791458996` } },
-			{ urlButton: { displayText: `Script!`, url : `https://github.com/rtwone/chitandabot` } },
+			{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6285861870154` } },
+			{ urlButton: { displayText: `Script!`, url : `https://github.com/Nino-Zu/7k-bot` } },
 			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
+			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } }
+		]
+		const buttonsInfo = [
+			{ urlButton: { displayText: `Instagram`, url : `https://instagram.com/ninowangy` } },
 			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } }
 		]
         
@@ -355,6 +359,29 @@ module.exports = async(conn, msg, m, setting, store) => {
                 }
                 mentions(txt, men, true)
                 break
+                case prefix+'infobot':
+			    var teks = `Seiko Bot Information
+
+• *Name :* Seiko Bot
+• *Number :* 6281381455128
+• *Owner :* 6285861870154
+• *Total Penggunaa :* ${pendaftar.length}
+• *Prefix :* Multi Prefix
+• *Website :* nino-zu.github.io
+• *Github :* github.com/Nino-Zu
+• Bot Created On Okt 2021
+
+*Special Thanks To :*
+• *Allah SWT*
+• *Adiwajshing/Baileys*
+• *Febb*
+• *Lindow*
+• *Null Team*
+• *Penyedia Dari :*
+    - *Rest Api*
+    - *Module*`
+			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(./media/7k.gif) }, templateButtons: buttonsInfo, footer: 'SevenKeys-Team-ID © 2022', mentions: [sender] })
+				break
 	        // Converter & Tools Menu
 			case prefix+'sticker': case prefix+'stiker': case prefix+'s':
 			    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)

@@ -20,21 +20,21 @@ function toCommas(x) {
 }
 
 exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount) => {
-	return `*── 「 ${setting.botName} - MD Beta 」 ──*
+	return `*── 「 ${setting.botName} - MD 」 ──*
 	
-  _*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'}*_
+_*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'}*_
 
-    Library : *Baileys-MD*.
-    Prefix : ( ${prefix} )
-    Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
-    Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
+  Library : *Baileys-MD*.
+  Prefix : ( ${prefix} )
+  Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
+  Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
 
-	Status : ${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Free'}
-	Limit Harian : ${isOwner ? '-' : isPremium ? 'Unlimited' : getLimit(sender, limitCount, limit)}
-	Limit Game : ${isOwner ? '-' : cekGLimit(sender, gcount, glimit)}
-	Balance : $${toCommas(getBalance(sender, balance))}
-
-  *( 📍 )  Main Menu*
+  Status : ${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Free'}
+  Limit Harian : ${isOwner ? '-' : isPremium ? 'Unlimited' : getLimit(sender, limitCount, limit)}
+  Limit Game : ${isOwner ? '-' : cekGLimit(sender, gcount, glimit)}
+  Balance : $${toCommas(getBalance(sender, balance))}
+  
+  *MAIN MENU*
   ≻ ${prefix}menu
   ≻ ${prefix}owner
   ≻ ${prefix}donasi
@@ -43,12 +43,12 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}cekprem
   ≻ ${prefix}listprem
 
-  *( ✏️ )  Converter/Tools*
+  *CONVERTER/TOOLS*
   ≻ ${prefix}sticker
   ≻ ${prefix}toimg
   ≻ ${prefix}tovid
 
-  *( ⌛ )  Downloader*
+  *DOWNLOADER*
   ≻ ${prefix}play
   ≻ ${prefix}tiktok
   ≻ ${prefix}ytmp4
@@ -58,29 +58,29 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}instagram
   ≻ ${prefix}facebook
   
-  *( ♻️ )  Random Menu*
+  *RANDOM MENU*
   ≻ ${prefix}quote
   ≻ ${prefix}cecan
   ≻ ${prefix}cogan
   
-  *( 🔎 )  Search Menu*
+  *SEARCH MENU*
   ≻ ${prefix}lirik
   ≻ ${prefix}grupwa
   ≻ ${prefix}ytsearch
   
-  *( 🎮 )  Game Menu*
+  *GAME MENU*
   ≻ ${prefix}tictactoe
   ≻ ${prefix}delttc
   ≻ ${prefix}tebakgambar
   
-  *( 🏦 )  Payment & Bank*
+  *PAYMENT & BANK*
   ≻ ${prefix}buylimit
   ≻ ${prefix}buyglimit
   ≻ ${prefix}transfer
   ≻ ${prefix}limit
   ≻ ${prefix}balance
   
-  *( 👥 )  Group Menu*
+  *GROUP MENU*
   ≻ ${prefix}linkgrup
   ≻ ${prefix}setppgrup
   ≻ ${prefix}setnamegc
@@ -89,7 +89,7 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}revoke
   ≻ ${prefix}hidetag
   
-  *( 🧑🏻‍💻 )  Owner Menu*
+  *OWNER MENU*
   > evalcode
   x evalcode-2
   $ executor
@@ -101,5 +101,5 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}addprem
   ≻ ${prefix}delprem
 
-`+'     \`\`\`Powered by Nodejs\`\`\`'
+`
 }
