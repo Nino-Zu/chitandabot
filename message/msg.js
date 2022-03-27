@@ -380,7 +380,7 @@ module.exports = async(conn, msg, m, setting, store) => {
 • *Penyedia Dari :*
     - *Rest Api*
     - *Module*`
-			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(./media/7k.gif) }, templateButtons: buttonsInfo, footer: 'SevenKeys-Team-ID © 2022', mentions: [sender] })
+			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsInfo, footer: 'SevenKeys-Team-ID © 2022', mentions: [sender] })
 				break
 	        // Converter & Tools Menu
 			case prefix+'sticker': case prefix+'stiker': case prefix+'s':
